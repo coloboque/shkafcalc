@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Калькулятор дверей для шкафа-купе</title>
+</head>
+<body>
+<div class="calc"> 
+    <h2>1. Введите габариты проема:</h2>
+    
+   Ширина: <input type="text" class="textin" id="shir" value="0" onchange="calc()" /> мм 
+   Высота: <input type="text" class="textin" id="vis" value="0" onchange="calc()" /> мм 
+    <div> 
+      <span id="eror"></span> 
+    </div>
+
+   <h2>2. Выберите количество дверей:</h2>
+   
+   <div>Рекомендованное количество дверей: 
+    <span class="number" id="recdver">0</span> шт.
+  </div>
+   
+    <div>Минимальное количество дверей: 
+      <span class="number" id="mindver">0</span> шт.
+    </div>
+
+   <h2>Выберите количество дверей: </h2>
+
+   <select id="dveri" onchange="calc()"> 
+    <option value="0">Выбрать</option> <option id="2dveri" value="2" selected="">2</option><option id="3dveri" value="3">3</option> <option id="4dveri" value="4">4</option> 
+    <option id="5dveri" value="5">5</option> <option id="6dveri" value="6">6</option> 
+    <option id="7dveri" value="7">7</option> <option id="8dveri" value="8">8</option> 
+  </select> 
+
+    <div>Ширина 1ой двери: <span class="number" id="sh1dver">0</span> мм.</div>
+   
+    <h2>3. Выберите наполнение:</h2>
+
+   <select id="fill" onchange="calc()"> 
+    <option>Выбрать</option> <option value="800">Стекло</option>
+    <option value="2000">Стекло +тонирующая пленка</option>
+    <option value="2000">Стекло Лакобель</option>
+    <option value="4500">Стекло +фотопечать</option>
+    <option value="1500">Зеркало </option> 
+    <option value="3000">Ротанг</option> 
+    <option value="500">ДСП</option> 
+  </select> 
+   
+   <input type="checkbox" value="1300" id="ris" onchange="calc()" /> 
+    <label for="ris">Нанесение пескоструйных рисунков</label> 
+
+    <h2>4. Сервис:</h2>
+   <input type="checkbox" value="1000" id="dost" onchange="calc()" /> 
+   <label for="dost">Требуется доставка?</label> 
+    
+   <input type="checkbox" value="1000" id="ust" onchange="calc()" /> 
+   <label for="ust">Требуется установка?</label> 
+    <div class="final">Примерная стоимость дверей: 
+      <span class="number" id="result">0</span> руб.</div>
+   
+    <h2> В стоимость входит: </h2>
+   
+    <ul class="spisok">        
+      <li> Двери заказанного вами размера </li>
+           
+      <li> Направляющие (верхняя, нижняя) </li>
+           
+      <li> Ролики </li>
+           
+      <li> Сборка и упаковка </li>
+     </ul>
+
+    
+     </div>
+   </div>
+ </div>
+  <script src="calc.js"></script>
+  
+</body>
+</html>
